@@ -2,7 +2,7 @@ import hashlib
 import hmac
 import codecs
 
-
+##PARTE 1##
 # Sha256 en hex, bin y base64
 texto = input("Ingrese el texto a cifrar:\n")
 convertBits = bytes(texto, 'utf-8')
@@ -50,7 +50,7 @@ print("El resultado de blake2b en base64 es: \n")
 print(blake2bB64)
 
 
-# Parte 2
+# PARTE 2
 # Lee el archivo deseado
 original_file = open("data.txt", "r")
 mensaje = original_file.read()
@@ -93,8 +93,8 @@ password = input("ingrese la clave del archivo:\n")
 generateHash(filename, password)
 
 
-# Parte 3
-
+# PARTE 3
+# La parte 3 se realizo con hmac, y este no requeria de un salt aleatorio
 
 def register(user, password):
     try:
